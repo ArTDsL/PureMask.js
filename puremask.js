@@ -3,7 +3,7 @@
  * https://romulobrasil.com
  * Copyright (c) 2016-2023 Rmulo Brasil
  * ============================================
- */ 
+ */
 const PureMask = {
   logs: {
     element: 'PureMask.js: Please declare the element that will receive the mask.',
