@@ -1,7 +1,9 @@
 /* ============================================
- * Pure Mask JS: puremask.js v1.0.3
+ * Pure Mask JS: puremask.js v1.1.4
  * https://romulobrasil.com
  * Copyright (c) 2016-2023 Rmulo Brasil
+ * https://artdsl.space
+ * Copyright (c) 2025 @ArTDsL (Some fixes ♥)
  * ============================================
  */ 
 const PureMask = {
@@ -32,14 +34,18 @@ const PureMask = {
             this.applyMaskToValue(el, el.dataset.mask);
           }
         });
+        el.addEventListener('change', e => {
+          if(e.keyCode != 8 && e.keyCode != 46) {
+            this.applyMaskToValue(el, el.dataset.mask);
+          }
+        });
       });
     }
   },
   applyMaskToValue(el, mask){
     let formattedText = '';
     let currentChar, maskChar;
-
-    for (let i = 0, isValid = true; isValid && i < mask.length - 1; ++i) {
+    for (let i = 0, isValid = true; isValid && i < mask.length; ++i) {
       currentChar = el.value.charAt(i);
       maskChar = mask.charAt(i);
 
