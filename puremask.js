@@ -5,7 +5,7 @@
  * https://artdsl.space
  * Copyright (c) 2025 @ArTDsL (Some fixes ♥)
  * ============================================
- */ 
+ */
 const PureMask = {
   logs: {
     element: 'PureMask.js: Please declare the element that will receive the mask.',
